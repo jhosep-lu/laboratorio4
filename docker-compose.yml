@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  frontend:
+    build: /root/laboratoria4/practica_vue3
+    ports:
+      - '8080:80'
+  
+  backend:
+    build: /root/laboratoria4/backend
+    ports:
+      - '3000:3000'
+    volumes:
+      - '/root/laboratoria4/backend/db.json:/app/db.json'
